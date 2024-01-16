@@ -53,8 +53,9 @@ class BlockChain:
 if __name__ == "__main__":
     chain = BlockChain()
     chain.add_block('Hello, world')
-    chain.add_block('Hello, world')
-    chain.add_block('Hello, world')
-    chain.add_block('Hello, world')
+    chain.add_block({
+        "aloha": 1221
+    })
+
     for i in chain.chain:
         print(json.dumps(i.__dict__, indent=4))
